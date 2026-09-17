@@ -10,7 +10,6 @@ Click any button to download the file in that format.
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Multi extension download site</title>
 </head>
 <body style="background-color: #ffffff; color: #000000; font-family: 'Courier New', Courier, monospace; text-align: center; margin-top: 50px;">
 
