@@ -1,15 +1,9 @@
-# Multi extension download site
+This is a simple page where you can download sample files with various extensions.  
+Clicking each button downloads a file in the corresponding format (containing the text "sample").
 
-さまざまな拡張子のサンプルファイルをダウンロードできるシンプルな HTML ページです。  
-各ボタンをクリックすると、対応する形式のファイル（中身は `sample`）がダウンロードされます。
+## How to Use
+Click any button to download the file in that format.
 
-## 使い方
-
-1. 以下の HTML コードを `index.html` などのファイル名で保存します。
-2. ブラウザで開くと、拡張子ごとのダウンロードボタンが表示されます。
-3. 任意のボタンをクリックすると、その形式のファイルがダウンロードされます。
-
-## HTML コード
 
 ```html
 <!DOCTYPE html>
@@ -26,13 +20,13 @@
 
     <!-- HTML -->
     <a href="data:text/html;charset=utf-8,sample" download="sample.html">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.html ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.html download</button>
     </a>
     <br>
 
     <!-- CSS -->
     <a href="data:text/css;charset=utf-8,sample" download="sample.css">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.css ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.css download</button>
     </a>
     <br>
 
@@ -44,31 +38,31 @@
 
     <!-- TXT -->
     <a href="data:text/plain;charset=utf-8,sample" download="sample.txt">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.txt ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.txt download</button>
     </a>
     <br>
 
     <!-- JSON -->
     <a href="data:application/json;charset=utf-8,sample" download="sample.json">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.json ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.json download</button>
     </a>
     <br>
 
     <!-- XML -->
     <a href="data:application/xml;charset=utf-8,sample" download="sample.xml">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.xml ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.xml download</button>
     </a>
     <br>
 
     <!-- CSV -->
     <a href="data:text/csv;charset=utf-8,sample" download="sample.csv">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.csv ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.csv download</button>
     </a>
     <br>
 
     <!-- MD -->
     <a href="data:text/markdown;charset=utf-8,sample" download="sample.md">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.md ダウンロード</button>
+        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.md download</button>
     </a>
     <br>
 
