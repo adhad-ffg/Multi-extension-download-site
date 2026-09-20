@@ -1,6 +1,8 @@
 This is a simple page where you can download sample files with various extensions.  
 Clicking each button downloads a file in the corresponding format (containing the text "sample").
 
+I don't know because I'm not good at css, but I wonder if someone can fix it.🙏
+
 ## How to Use
 Click any button to download the file in that format.
 
