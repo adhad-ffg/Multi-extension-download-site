@@ -1,62 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi extension download site</title>
+    <style>
+        :root {
+            --bg: #fafafa;
+            --fg: #1a1a1a;
+            --muted: #666;
+            --border: #1a1a1a;
+            --btn-bg: #ffffff;
+            --btn-hover-bg: #1a1a1a;
+            --btn-hover-fg: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #121212;
+                --fg: #f0f0f0;
+                --muted: #999;
+                --border: #f0f0f0;
+                --btn-bg: #1e1e1e;
+                --btn-hover-bg: #f0f0f0;
+                --btn-hover-fg: #121212;
+            }
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 60px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        hr {
+            width: 50%;
+            border: none;
+            border-top: 2px solid var(--border);
+            margin: 24px auto 40px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 200px));
+            justify-content: center;
+            gap: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: block;
+            background-color: var(--btn-bg);
+            color: var(--fg);
+            border: 2px solid var(--border);
+            padding: 12px 20px;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--btn-hover-bg);
+            color: var(--btn-hover-fg);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        footer {
+            margin-top: 50px;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
-<body style="background-color: #ffffff; color: #000000; font-family: 'Courier New', Courier, monospace; text-align: center; margin-top: 50px;">
-
+<body>
     <h1>Multi extension download site</h1>
-    <hr style="width: 50%; border: 1px solid #000000;">
-    <br>
+    <p class="subtitle">ボタンをクリックすると "sample" という内容のファイルがダウンロードされます</p>
+    <hr>
 
-    <!-- HTML -->
-    <a href="data:text/html;charset=utf-8,sample" download="sample.html">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.html ダウンロード</button>
-    </a>
-    <br>
+    <div class="buttons">
+        <a class="btn" href="data:text/html;charset=utf-8,sample" download="sample.html">.html ダウンロード</a>
+        <a class="btn" href="data:text/css;charset=utf-8,sample" download="sample.css">.css ダウンロード</a>
+        <a class="btn" href="data:text/javascript;charset=utf-8,sample" download="sample.js">.js ダウンロード</a>
+        <a class="btn" href="data:text/plain;charset=utf-8,sample" download="sample.txt">.txt ダウンロード</a>
+        <a class="btn" href="data:application/json;charset=utf-8,sample" download="sample.json">.json ダウンロード</a>
+        <a class="btn" href="data:application/xml;charset=utf-8,sample" download="sample.xml">.xml ダウンロード</a>
+        <a class="btn" href="data:text/csv;charset=utf-8,sample" download="sample.csv">.csv ダウンロード</a>
+        <a class="btn" href="data:text/markdown;charset=utf-8,sample" download="sample.md">.md ダウンロード</a>
+    </div>
 
-    <!-- CSS -->
-    <a href="data:text/css;charset=utf-8,sample" download="sample.css">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.css ダウンロード</button>
-    </a>
-    <br>
-
-    <!-- JS -->
-    <a href="data:text/javascript;charset=utf-8,sample" download="sample.js">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.js ダウンロード</button>
-    </a>
-    <br>
-
-    <!-- TXT -->
-    <a href="data:text/plain;charset=utf-8,sample" download="sample.txt">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.txt ダウンロード</button>
-    </a>
-    <br>
-
-    <!-- JSON -->
-    <a href="data:application/json;charset=utf-8,sample" download="sample.json">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.json ダウンロード</button>
-    </a>
-    <br>
-
-    <!-- XML -->
-    <a href="data:application/xml;charset=utf-8,sample" download="sample.xml">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.xml ダウンロード</button>
-    </a>
-    <br>
-
-    <!-- CSV -->
-    <a href="data:text/csv;charset=utf-8,sample" download="sample.csv">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.csv ダウンロード</button>
-    </a>
-    <br>
-
-    <!-- MD -->
-    <a href="data:text/markdown;charset=utf-8,sample" download="sample.md">
-        <button style="background-color: #ffffff; color: #000000; border: 2px solid #000000; padding: 10px 20px; margin: 5px; cursor: pointer; font-family: monospace;">.md ダウンロード</button>
-    </a>
-    <br>
-
+    <footer>sample files only — no server required</footer>
 </body>
 </html>
